@@ -28,7 +28,7 @@ const animals = [
  */
 function getTotalCount(animals) {
   let howMany = 0;
-  for (let each in animals){
+  for (let each in animals) {
     howMany += animals[each].count;
   }
   return howMany;
@@ -48,7 +48,7 @@ function getTotalCount(animals) {
  */
 function getAllKinds(animals) {
   let animalPen = [];
-  for (let each in animals){
+  for (let each in animals) {
     animalPen.push(animals[each].kind);
   }
   return animalPen;
@@ -74,8 +74,8 @@ function getAllKinds(animals) {
 function filterByCountMinimum(animals, minimum) {
   let pasture = [];
 
-  for (let each in animals){
-    if (animals[each].count >= minimum){
+  for (let each in animals) {
+    if (animals[each].count >= minimum) {
       pasture.push(animals[each]);
     }
   }
@@ -98,12 +98,12 @@ function getMostCommonAnimal(animals) {
   let howMany = 0;
   let biggest = 0;
 
-  if (animals.length == 0){
+  if (animals.length == 0) {
     return null;
-  } 
+  }
 
-  for (let each in animals){
-    if (animals[each].count > howMany){
+  for (let each in animals) {
+    if (animals[each].count > howMany) {
       howMany = animals[each].count;
       biggest = each;
     }
